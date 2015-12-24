@@ -10,11 +10,11 @@
 	<header class="header">
 		<div class="header-mobile">
 			<h1 class="header-logo">Logo</h1>
-		<button class="header-btn-nav">Menu</button>
+		<button id="btnMenu" class="header-btn-nav">Menu</button>
 		</div>
 		
 		<nav class="header-menu-navbar">
-			<ul class="header-menu-list">
+			<ul id="navbarMenu" class="header-menu-list">
 				<li class="header-menu-list-item">
 					<a href="#">Inicio</a>
 				</li>
@@ -30,5 +30,28 @@
 			</ul>
 		</nav>
 	</header>
+	<section>
+	<div class="video-container">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/TRmgMe2STL0?autoplay=1;loop=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+		
+	</section>
+
+	<script>
+	(function() {
+		var btnMenu=document.getElementById('btnMenu');
+		var navbarMenu=document.getElementById('navbarMenu');
+		
+		btnMenu.addEventListener('click', onClickMenu);
+
+		function onClickMenu(){
+			navbarMenu.classList.toggle('header-menu-list--show');
+
+
+		}
+
+
+	}())
+	</script>
 </body>
 </html>
